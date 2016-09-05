@@ -16,7 +16,7 @@
             <h2 class="add-slide__title"><span class="add-slide__number">{{id}}</span>Klik hier om een titel toe te voegen</h2>
             <div class="add-slide">
                 <div class="add-slide__content">
-                    <img class="content__image" src="./assets/images/input-text.png" *ngIf="textPreview && type === 'text'" (click)="showSlideText()" />
+                    <img class="content__image" src="./assets/images/input-text.png" *ngIf="textPreview && type === 'previewText'" (click)="showSlideText()" />
                     <img class="content__image" src="./assets/images/slide9.png" *ngIf="textSlide && type === 'text'" />
 
                     <img class="content__image" src="./assets/images/slide8.png" *ngIf="type === 'video'" />

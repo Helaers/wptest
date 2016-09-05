@@ -25,7 +25,7 @@
     top: 43px;
     width: 182px;
     height: 96px;
-    background: url('./app/images/wheel-small.png');
+    background: url('./assets/images/wheel-small.png');
     background-size: 100%;
 }
 
@@ -58,7 +58,7 @@
 .wheel__expanded {
     width: 182px;
     height: 182px;
-    background: url('./app/images/wheel-big.png');
+    background: url('./assets/images/wheel-big.png');
     background-size: 100%;
 }
 
@@ -91,7 +91,7 @@
     height: 196px;
 
 
-    background: url('./app/images/wheel-pen-dropdown.png');
+    background: url('./assets/images/wheel-pen-dropdown.png');
     background-size: 100%;
 }
 
@@ -103,6 +103,6 @@
     height: 68px;
 
 
-    background: url('./app/images/wheel-answers-dropdown.png');
+    background: url('./assets/images/wheel-answers-dropdown.png');
     background-size: 100%;
 }

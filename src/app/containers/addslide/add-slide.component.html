@@ -1,7 +1,7 @@
 <section class="editor">
     <header class="editor__header">
         <h1 class="header__title">
-            <img class="header__label" src="./app/images/editor-header-label.png" /> Getallen en getalpatronen
+            <img class="header__label" src="./assets/images/editor-header-label.png" /> Getallen en getalpatronen
         </h1>
         <div class="header__buttons">
             <a class="header__button--overview" [routerLink]="['/editor']"></a>
@@ -16,37 +16,37 @@
             <h2 class="add-slide__title"><span class="add-slide__number">{{id}}</span>Klik hier om een titel toe te voegen</h2>
             <div class="add-slide">
                 <div class="add-slide__content">
-                    <img class="content__image" src="./app/images/input-text.png" *ngIf="textPreview && type === 'text'" (click)="showSlideText()" />
-                    <img class="content__image" src="./app/images/slide9.png" *ngIf="textSlide && type === 'text'" />
+                    <img class="content__image" src="./assets/images/input-text.png" *ngIf="textPreview && type === 'text'" (click)="showSlideText()" />
+                    <img class="content__image" src="./assets/images/slide9.png" *ngIf="textSlide && type === 'text'" />
 
-                    <img class="content__image" src="./app/images/slide8.png" *ngIf="type === 'video'" />
-                    <img class="content__image" src="./app/images/slide10.png" *ngIf="type === 'image'" />
-                    <img class="content__image" src="./app/images/slide11.png" *ngIf="type === 'audio'" />
-                    <img class="content__image" src="./app/images/slide12.png" *ngIf="type === 'link'" />
-                    <img class="content__image" src="./app/images/slide13.png" *ngIf="type === 'bingel'" />
+                    <img class="content__image" src="./assets/images/slide8.png" *ngIf="type === 'video'" />
+                    <img class="content__image" src="./assets/images/slide10.png" *ngIf="type === 'image'" />
+                    <img class="content__image" src="./assets/images/slide11.png" *ngIf="type === 'audio'" />
+                    <img class="content__image" src="./assets/images/slide12.png" *ngIf="type === 'link'" />
+                    <img class="content__image" src="./assets/images/slide13.png" *ngIf="type === 'bingel'" />
                 </div>
             </div>
             <ul class="add-slide__button-bar">
                 <li class="button-bar__item">
-                    <a class="button_bar__button" [class.active]="(textPreview || textSlide) && type === 'text'" (click)="showTextPreview()"><img class="button_bar__icon" src="./app/images/icn-text.png"></a>
+                    <a class="button_bar__button" [class.active]="(textPreview || textSlide) && type === 'text'" (click)="showTextPreview()"><img class="button_bar__icon" src="./assets/images/icn-text.png"></a>
                 </li>
                 <li (click)="openModal('image')" class="button-bar__item">
-                    <a class="button_bar__button" [class.active]="type === 'image'"><img class="button_bar__icon image" src="./app/images/icn-image.png"></a>
+                    <a class="button_bar__button" [class.active]="type === 'image'"><img class="button_bar__icon image" src="./assets/images/icn-image.png"></a>
                 </li>
                 <li (click)="openModal('video')" class="button-bar__item">
-                    <a class="button_bar__button" [class.active]="type === 'video'"><img class="button_bar__icon video" src="./app/images/icn-video.png"></a>
+                    <a class="button_bar__button" [class.active]="type === 'video'"><img class="button_bar__icon video" src="./assets/images/icn-video.png"></a>
                 </li>
                 <li (click)="openModal('audio')" class="button-bar__item">
-                    <a class="button_bar__button" [class.active]="type === 'audio'"><img class="button_bar__icon audio" src="./app/images/icn-audio.png"></a>
+                    <a class="button_bar__button" [class.active]="type === 'audio'"><img class="button_bar__icon audio" src="./assets/images/icn-audio.png"></a>
                 </li>
                 <li (click)="openModal('link')" class="button-bar__item">
-                    <a class="button_bar__button" [class.active]="type === 'link'"><img class="button_bar__icon link" src="./app/images/icn-link.png"></a>
+                    <a class="button_bar__button" [class.active]="type === 'link'"><img class="button_bar__icon link" src="./assets/images/icn-link.png"></a>
                 </li>
                 <li (click)="openModal('bingel')" class="button-bar__item">
-                    <a class="button_bar__button" [class.active]="type === 'bingel'"><img class="button_bar__icon bingel" src="./app/images/icn-bingel.png"></a>
+                    <a class="button_bar__button" [class.active]="type === 'bingel'"><img class="button_bar__icon bingel" src="./assets/images/icn-bingel.png"></a>
                 </li>
                 <li class="button-bar__item">
-                    <a class="button_bar__button red" (click)="clear()"><img class="button_bar__icon" src="./app/images/icn-trash.png"></a>
+                    <a class="button_bar__button red" (click)="clear()"><img class="button_bar__icon" src="./assets/images/icn-trash.png"></a>
                 </li>
             </ul>
         </div>

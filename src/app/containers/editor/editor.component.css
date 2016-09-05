@@ -83,7 +83,7 @@
 }
 .header__button--bordboek {
     width: 40px;
-    background: url('./app/images/btn-editor-home.png');
+    background: url('./assets/images/btn-editor-home.png');
     background-size: 100%;
 }
 
@@ -228,26 +228,26 @@
 }
 
 .thumbnail__button.view{
-    background: url('./app/images/btn-editor-view.png');
+    background: url('./assets/images/btn-editor-view.png');
     background-size: 100%;
 }
 .thumbnail__button.view.invisible{
-    background: url('./app/images/btn-editor-view-invisible.png');
+    background: url('./assets/images/btn-editor-view-invisible.png');
     background-size: 100%;
 }
 .thumbnail__button.info{
-    background: url('./app/images/btn-editor-info.png');
+    background: url('./assets/images/btn-editor-info.png');
     background-size: 100%;
 }
 .thumbnail__button.play{
-    background: url('./app/images/btn-editor-play.png');
+    background: url('./assets/images/btn-editor-play.png');
     background-size: 100%;
 }
 .thumbnail__button.edit{
-    background: url('./app/images/btn-editor-edit.png');
+    background: url('./assets/images/btn-editor-edit.png');
     background-size: 100%;
 }
 .thumbnail__button.delete{
-    background: url('./app/images/btn-editor-delete.png');
+    background: url('./assets/images/btn-editor-delete.png');
     background-size: 100%;
 }

@@ -58,12 +58,12 @@
 .header__button--overview {
     width: 40px;
     margin-right: 15px;
-    background: url('./app/images/btn-editor-overview.png');
+    background: url('./assets/images/btn-editor-overview.png');
     background-size: 100%;
 }
 .header__button--bordboek {
     width: 40px;
-    background: url('./app/images/btn-editor-home.png');
+    background: url('./assets/images/btn-editor-home.png');
     background-size: 100%;
 }
 
@@ -155,7 +155,7 @@
 .add-slide {
     position: relative;
     display: inline-block;
-    background:url('./app/images/add-slide-bg.png');
+    background:url('./assets/images/add-slide-bg.png');
     background-size: 100%;
 
     width: 91.5%;

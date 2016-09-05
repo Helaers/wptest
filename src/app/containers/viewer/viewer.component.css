@@ -45,11 +45,11 @@
 
 .header__button--overview {
     margin-right: 15px;
-    background: url('./app/images/icn-slides-overview.png');
+    background: url('./assets/images/icn-slides-overview.png');
     background-size: 100%;
 }
 .header__button--bordboek {
-    background: url('./app/images/icn-slides-book.png');
+    background: url('./assets/images/icn-slides-book.png');
     background-size: 100%;
 }
 

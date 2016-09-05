@@ -52,7 +52,7 @@
   display: inline-block;
   width: 30px;
   height: 30px;
-  background: url('./app/images/btn-close.png');
+  background: url('./assets/images/btn-close.png');
   background-size: 100%;
 }
 
@@ -66,24 +66,24 @@
 }
 
 .carrousel__next {
-  background: url('./app/images/btn-arrow-right.png');
+  background: url('./assets/images/btn-arrow-right.png');
   background-size: 100%;
 }
 
 .carrousel__next:active {
   transform: rotate(180deg);
-  background: url('./app/images/btn-arrow-left.png');
+  background: url('./assets/images/btn-arrow-left.png');
   background-size: 100%;
 }
 
 .carrousel__prev {
-  background: url('./app/images/btn-arrow-left.png');
+  background: url('./assets/images/btn-arrow-left.png');
   background-size: 100%;
 }
 
 .carrousel__prev:active {
   transform: rotate(180deg);
-  background: url('./app/images/btn-arrow-right.png');
+  background: url('./assets/images/btn-arrow-right.png');
   background-size: 100%;
 }
 

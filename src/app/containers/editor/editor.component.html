@@ -1,0 +1,37 @@
+<section class="editor">
+    <header class="editor__header">
+        <h1 class="header__title">
+            <img class="header__label" src="./app/images/editor-header-label.png" /> Getallen en getalpatronen
+        </h1>
+        <div class="header__buttons">
+            <a class="header__button--addslide" [routerLink]="['/editor/add-slide']"><span class="add-icon">+</span> Scherm toevoegen</a>
+            <a class="header__button--bordboek" [routerLink]="['/home']"></a>
+        </div>
+    </header>
+    <div class="editor__subheader">
+        <h2 class="subheader__title">Overzicht</h2>
+    </div>
+
+    <section class="editor__body">
+        <ul class="editor__thumbnail-container" [dragula]='"slides-bag"' [dragulaModel]='slides'>
+            <li class="editor__thumbnail" *ngFor="let slide of slides">
+                <span class="thumbnail__number">{{slide.id}}</span>
+                <img class="thumbnail__image" [src]="slide.thumb" [class.disabled]="!slide.visible" />
+                <div class="thumbnail__hover-container">
+                    <img src="./app/images/icn-invisible.png" *ngIf="!slide.visible" class="thumbnail__hover-image--invisible" />
+                    <div class="thumbnail__hover">
+                        <a class="thumbnail__button view" [class.invisible]="!slide.visible" (click)="toggleVisibility(slide.id)"></a>
+                        <a class="thumbnail__button info"></a>
+                        <a class="thumbnail__button play" [routerLink]="['/viewer/slide', slide.id]"></a>
+                        <a class="thumbnail__button edit" *ngIf="slide.type === 'user'"></a>
+                        <a class="thumbnail__button delete" *ngIf="slide.type === 'user'" (click)="delete(slide)"></a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <footer class="editor__footer"></footer>
+</section>
+
+<wheel></wheel>

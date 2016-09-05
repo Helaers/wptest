@@ -1,0 +1,126 @@
+.carrousel {
+  position: fixed;
+  margin: 0 auto;
+  bottom: -280px;
+  left: 0;
+  right: 0;
+  padding: 50px 35px 0;
+  height: 280px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+
+  transition: bottom 0.4s ease-in-out;
+}
+
+.carrousel.active {
+  bottom: 0;
+}
+
+.carrousel__overflow {
+  width: 700px;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.carrousel__container {
+  -webkit-transition: margin-left 0.3s ease-in-out;
+  -moz-transition: margin-left 0.3s ease-in-out;
+  -ms-transition: margin-left 0.3s ease-in-out;
+  -o-transition: margin-left 0.3s ease-in-out;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.carrousel__thumb {
+  width: 230px;
+  height: 210px;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 7px;
+  position: relative;
+}
+
+.carrousel__thumb:first-child {
+  margin-left: -13px;
+}
+
+.carrousel__close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url('./app/images/btn-close.png');
+  background-size: 100%;
+}
+
+.carrousel__next,
+.carrousel__prev {
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+}
+
+.carrousel__next {
+  background: url('./app/images/btn-arrow-right.png');
+  background-size: 100%;
+}
+
+.carrousel__next:active {
+  transform: rotate(180deg);
+  background: url('./app/images/btn-arrow-left.png');
+  background-size: 100%;
+}
+
+.carrousel__prev {
+  background: url('./app/images/btn-arrow-left.png');
+  background-size: 100%;
+}
+
+.carrousel__prev:active {
+  transform: rotate(180deg);
+  background: url('./app/images/btn-arrow-right.png');
+  background-size: 100%;
+}
+
+
+/* thumbnail styling */
+.carrousel__number {
+  display: inline-block;
+  border-radius: 50%;
+  padding-top: 3px;
+  padding-left: 1px;
+  color: #8f8d16;
+  border: 1px solid #8f8d16;
+  font-size: 11px;
+  width: 20px;
+  height: 20px;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 10px;
+}
+
+.carrousel__image {
+  cursor: pointer;
+  width: 200px;
+  box-shadow: 0 7px 15px -2px rgba(0, 0, 0, 0.23);
+}
+
+.carrousel__image.disabled {
+  cursor: default;
+  opacity: 0.4;
+  box-shadow: none;
+}
+
+/*.carrousel__image:active,
+.carrousel__image:hover {
+  border: 3px solid #faba02;
+}
+
+.carrousel__image.disabled:active,
+.carrousel__image.disabled:hover, {
+  border: 0;
+}*/

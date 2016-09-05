@@ -1,0 +1,14 @@
+<section class="carrousel" [class.active]="showCarrousel">
+    <button class="carrousel__prev" (click)="prev()"></button>
+        <div class="carrousel__overflow">
+            <div class="carrousel__container" [ngStyle]="carrouselStyle">
+                <div class="carrousel__thumb" *ngFor="let slide of slides">
+                    <span class="carrousel__number">{{slide.id}}</span>
+                    <img class="carrousel__image" [src]="slide.thumb" (click)="goToSlide(slide)" [class.disabled]="!slide.visible" />
+                </div>
+            </div>
+        </div>
+    <button class="carrousel__next" (click)="next()"></button>
+
+    <a class="carrousel__close" (click)="close()"></a>
+</section>

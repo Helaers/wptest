@@ -1,0 +1,253 @@
+.editor {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+.editor__header,
+.editor__subheader,
+.editor__body {
+    padding: 0 5%;
+}
+
+.editor__header{
+    padding-top: 20px;
+    box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 5;
+}
+.header__label {
+    width: 31px;
+    margin-top: 4px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 5px;
+}
+.header__title {
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 32px;
+    color: #7a7a7a;
+    margin-top: 5px;
+    display: inline-block;
+}
+@media (max-width: 850px) {
+    .header__title {
+        font-size: 25px;
+    }
+    .header__label {
+        width: 25px;
+        margin-top: 2px;
+    }
+}
+
+.header__buttons {
+    display: inline-block;
+    vertical-align: middle;
+    float: right;
+    margin-top: 6px;
+}
+
+.header__button--bordboek,
+.header__button--addslide {
+    cursor: pointer;
+    display: inline-block;
+    height: 40px;
+}
+
+.header__button--addslide {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #fff;
+    padding: 11px 25px;
+    text-decoration: none;
+    vertical-align: top;
+    border-radius: 20px;
+    margin-right: 10px;
+
+    background: #aaa81b; /* Old browsers */
+    background: -moz-linear-gradient(45deg,  #aaa81b 0%, #8f8d16 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg,  #aaa81b 0%,#8f8d16 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg,  #aaa81b 0%,#8f8d16 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aaa81b', endColorstr='#8f8d16',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+.header__button--addslide .add-icon {
+    color: inherit;
+    font-size: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    margin-top: -3px;
+}
+.header__button--bordboek {
+    width: 40px;
+    background: url('./app/images/btn-editor-home.png');
+    background-size: 100%;
+}
+
+
+.editor__subheader,
+.editor__footer {
+    position: relative;
+    z-index: 0;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#aaa81b+0,8f8d16+100 */
+    background: #aaa81b; /* Old browsers */
+    background: -moz-linear-gradient(45deg,  #aaa81b 0%, #8f8d16 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg,  #aaa81b 0%,#8f8d16 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg,  #aaa81b 0%,#8f8d16 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aaa81b', endColorstr='#8f8d16',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.subheader__title {
+    display: inline-block;
+    font-weight: 400;
+    color: #fff;
+}
+
+.editor__footer {
+    position: fixed;
+    width: 100%;
+    height: 10px;
+    bottom: 0;
+    margin-top: 40px;
+}
+
+.editor__body {
+    /*min-height: 90%;*/
+    /*margin-bottom: -10px; */
+}
+.editor__body:after {
+  content: "";
+  display: block;
+}
+
+.editor__footer, .editor__body:after {
+  height: 10px; 
+}
+
+/* ----------------
+    Slides List
+------------------ */
+
+.editor__thumbnail-container {
+    position: relative;
+    list-style-type: none;
+    width: 800px;
+    margin: 0 auto;
+    padding-left: 0;
+}
+
+.editor__thumbnail {
+    position: relative;
+    overflow: hidden;
+    width: 256px;
+    /* height: 240px; */
+    display: inline-block;
+    text-align: center;
+    margin: 15px 8px 0px;
+    padding: 10px;
+}
+
+.editor__thumbnail:nth-child(3n+3) {
+    margin-right: 0;
+}
+.editor__thumbnail:nth-child(3n+1) {
+    margin-left: 0;
+}
+
+.thumbnail__number {
+  display: inline-block;
+  border-radius: 50%;
+  padding-top: 3px;
+  color: #8f8d16;
+  border: 1px solid #8f8d16;
+  font-size: 11px;
+  width: 20px;
+  height: 20px;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 10px;
+}
+
+.thumbnail__image {
+  max-width: 100%;
+  box-shadow: 0 7px 15px -2px rgba(0, 0, 0, 0.23);
+}
+
+.thumbnail__hover-container {
+    position: absolute;
+    top: 47px;
+    left: 15px;
+    width: 88%;
+    height: 167px;
+    overflow: hidden;
+    cursor: -webkit-grab; 
+    cursor: -moz-grab;
+}
+.thumbnail__hover-image--invisible {
+    opacity: 0.5;
+    width: 70px;
+    margin-top: 60px;
+}
+
+.thumbnail__hover-container:active {
+    cursor: -webkit-grabbing; 
+    cursor: -moz-grabbing;
+}
+
+.thumbnail__image.disabled {
+    opacity: 0.4;
+    box-shadow: none;
+}
+
+.thumbnail__hover {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding-top: 8px;
+
+    transition: bottom 0.4s ease-in-out;
+    transition-delay: 0s;
+}
+
+.thumbnail__hover-container:hover .thumbnail__hover {
+    bottom: 0;
+    transition-delay: 0.3s;
+}
+
+.thumbnail__button {
+    cursor: pointer;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+
+.thumbnail__button.view{
+    background: url('./app/images/btn-editor-view.png');
+    background-size: 100%;
+}
+.thumbnail__button.view.invisible{
+    background: url('./app/images/btn-editor-view-invisible.png');
+    background-size: 100%;
+}
+.thumbnail__button.info{
+    background: url('./app/images/btn-editor-info.png');
+    background-size: 100%;
+}
+.thumbnail__button.play{
+    background: url('./app/images/btn-editor-play.png');
+    background-size: 100%;
+}
+.thumbnail__button.edit{
+    background: url('./app/images/btn-editor-edit.png');
+    background-size: 100%;
+}
+.thumbnail__button.delete{
+    background: url('./app/images/btn-editor-delete.png');
+    background-size: 100%;
+}

@@ -1,0 +1,108 @@
+.wheel-container {
+    /*position: absolute;*/
+    right: 90px;
+    top: 50px;
+    width: 182px;
+    height: 182px;
+    z-index: 99;
+}
+
+.wheel__basic,
+.wheel__expanded {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*cursor: -webkit-grab; 
+    cursor: -moz-grab;*/
+}
+
+/*.wheel__expanded:active {
+    cursor: -webkit-grabbing; 
+    cursor: -moz-grabbing;
+}*/
+
+.wheel__basic {
+    top: 43px;
+    width: 182px;
+    height: 96px;
+    background: url('./app/images/wheel-small.png');
+    background-size: 100%;
+}
+
+.wheel__arrow {
+    position: absolute;
+    top: 73px;
+    display: block;
+    width: 37px;
+    height: 37px;
+    cursor: pointer;
+}
+
+.wheel__arrow.prev {
+    left: 14px;
+}
+.wheel__arrow.next {
+    right: 14px;
+}
+
+.wheel__icon-min-max {
+    position: absolute;
+    top: 53px;
+    display: block;
+    width: 12px;
+    height: 13px;
+    cursor: pointer;
+    right: 60px;
+}
+
+.wheel__expanded {
+    width: 182px;
+    height: 182px;
+    background: url('./app/images/wheel-big.png');
+    background-size: 100%;
+}
+
+.wheel__pen,
+.wheel__answers {
+    position: absolute;
+    display: block;
+    cursor: pointer;
+}
+
+.wheel__pen {
+    top: 133px;
+    left: 72px;
+    width: 38px;
+    height: 33px;
+}
+
+.wheel__answers {
+    top: 114px;
+    right: 32px;
+    width: 27px;
+    height: 29px;
+}
+
+.wheel__pen-dropdown {
+    position: absolute;
+    top: 127px;
+    left: -17px;
+    width: 215px;
+    height: 196px;
+
+
+    background: url('./app/images/wheel-pen-dropdown.png');
+    background-size: 100%;
+}
+
+.wheel__answers-dropdown {
+    position: absolute;
+    top: 111px;
+    left: 107px;
+    width: 163px;
+    height: 68px;
+
+
+    background: url('./app/images/wheel-answers-dropdown.png');
+    background-size: 100%;
+}

@@ -1,0 +1,24 @@
+<section class="viewer">
+    <header class="viewer__header">
+        <h1 class="header__title">
+            <img class="header__label" src="./app/images/bordles-header-label.png" /> Getallen en getalpatronen
+        </h1>
+        <div class="header__buttons">
+            <a class="header__button--overview" (click)="toggleCarrousel()"></a>
+            <a class="header__button--bordboek" [routerLink]="['/home']"></a>
+        </div>
+    </header>
+    <div class="slide-container">
+        <router-outlet></router-outlet>
+    </div>
+    <div class="viewer__page">
+        <span class="viewer__page--current">{{currentSlide}}</span> / {{totalSlides}}
+    </div>
+
+    <carrousel [slides]="slides" [showCarrousel]="carrousel" (closeCarrousel)="getCarrouselState($event)" (sendSlideId)="getCurrentSlide($event)"></carrousel>
+</section>
+
+<wheel [current]="currentSlide" [total]="totalSlides" (sendSlideId)="getCurrentSlide($event)"></wheel>
+
+
+        

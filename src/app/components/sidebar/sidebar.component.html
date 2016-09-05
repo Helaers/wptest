@@ -1,0 +1,19 @@
+<section class="sidebar sidebar--left" [class.slideSidebar]="showLeftSidebar">
+    <div class="sidebar__tools">
+        <img class="sidebar__tools-date--dropdown" src="./app/images/sidebar-date-left.png" *ngIf="showDate" />
+        <a class="sidebar__tools-date" (click)="showDate = !showDate"></a>
+        <a href class="sidebar__tools-bordles-editor" [routerLink]="['/editor']"></a>
+    </div>
+    <div class="sidebar__toggle sidebar__toggle--left" (click)="toggleLeftSidebar()">
+        <img class="sidebar__toggle-icon left" [class.slideSidebar]="showLeftSidebar" src="./app/images/sidebar-toggle-arrow.png" />
+    </div>
+</section>
+
+<section class="sidebar sidebar--right" [class.slideSidebar]="showRightSidebar">
+    <div class="sidebar__tools">
+        <a href class="sidebar__tools-bordles-editor" [routerLink]="['/editor']"></a>
+    </div>
+    <div class="sidebar__toggle sidebar__toggle--right" (click)="toggleRightSidebar()">
+        <img class="sidebar__toggle-icon right" [class.slideSidebar]="showRightSidebar" src="./app/images/sidebar-toggle-arrow.png" />
+    </div>
+</section>

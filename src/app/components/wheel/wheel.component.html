@@ -1,0 +1,12 @@
+ <div [draggable] style="position:absolute" class="wheel-container">
+     <div class="wheel__expanded" *ngIf="expanded">
+        <div class="wheel__pen-dropdown" *ngIf="showPenDropdown"></div>
+        <div class="wheel__answers-dropdown" *ngIf="showAnswersDropdown"></div>
+        <a class="wheel__pen" (click)="togglePen()"></a>
+        <a class="wheel__answers"  (click)="toggleAnswers()"></a>
+     </div>
+     <div class="wheel__basic" *ngIf="!expanded"></div>
+     <a class="wheel__arrow prev" (click)="prevSlide()"></a>
+     <a class="wheel__arrow next"  (click)="nextSlide()"></a>
+     <a class="wheel__icon-min-max" (click)="toggleExpandedView()"></a>
+</div>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Dragula, DragulaService } from 'ng2-dragula/ng2-dragula';
+import { DragulaDirective, DragulaService } from 'ng2-dragula/ng2-dragula';
 
 import { ROUTER_DIRECTIVES, Router } from '@angular/router';
 
@@ -11,7 +11,7 @@ import { SlidesService } from '../../services/slides.service';
     selector: 'editor',
     templateUrl: './editor.component.html',
     styleUrls: ['./editor.component.css'],
-    directives: [ROUTER_DIRECTIVES, WheelComponent, Dragula],
+    directives: [ROUTER_DIRECTIVES, WheelComponent, DragulaDirective],
     providers: [DragulaService]
 })
 
